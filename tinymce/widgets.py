@@ -138,7 +138,7 @@ def get_language_config(content_language=None):
             default = '+'
         else:
             default = ''
-        sp_langs.append('{!s}{!s}={!s}'.format(default, ' / '.join(names), lang))
+        sp_langs.append('{0!s}{1!s}={2!s}'.format(default, ' / '.join(names), lang))
 
     config['spellchecker_languages'] = ','.join(sp_langs)
 
