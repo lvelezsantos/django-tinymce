@@ -97,7 +97,7 @@ class TinyMCE(forms.Textarea):
             }
             final_attrs['data-mce-gz-conf'] = json.dumps(compressor_config)
         final_attrs['data-mce-conf'] = mce_json
-        html = ['<textarea{!s}>{!s}</textarea>'.format(flatatt(final_attrs), escape(value))]
+        html = ['<textarea{0!s}>{1!s}</textarea>'.format(flatatt(final_attrs), escape(value))]
         return mark_safe('\n'.join(html))
 
     def _media(self):
